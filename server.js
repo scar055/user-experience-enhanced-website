@@ -1,5 +1,37 @@
-console.log('Hier komt je server voor Sprint 10.')
+// import express en liquid
+import express from "express";
+import {Liquid} from "liquidjs";
 
-console.log('Gebruik uit Sprint 9 alleen de code die je mee wilt nemen.')
+// maak een express app aan
+const app = express();
 
-console.log('Zet \'m op!')
+// Maak werken met data uit formulieren iets prettiger
+app.use(express.urlencoded({extended: true}));
+
+// Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
+// Bestanden in deze map kunnen dus door de browser gebruikt worden
+app.use(express.static("public"));
+
+// Stel Liquid in als 'view engine'
+const engine = new Liquid();
+app.engine("liquid", engine.express());
+
+// Stel de map met Liquid templates in
+app.set("views", "./views");
+
+//voeg een index view aan
+app.get("/", async function (request, response) {
+  // Render index.liquid uit de Views map
+
+  response.render("index.liquid", {path: request.path});
+});
+
+// Stel het poortnummer in waar Express op moet gaan luisteren
+// Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
+app.set("port", process.env.PORT || 8000);
+
+// Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
+app.listen(app.get("port"), function () {
+  // Toon een bericht in de console
+  console.log(`ga naar http://localhost:${app.get("port")}/`);
+});
