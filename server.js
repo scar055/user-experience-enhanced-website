@@ -35,7 +35,12 @@ app.get("/nieuws", async function (request, response) {
       new URLSearchParams(params),
   );
 
-  response.render("news.liquid", {path: request.path});
+  const newsResponseJson = await newsResponse.json();
+
+  response.render("news.liquid", {
+    path: request.path,
+    news: newsResponseJson.data,
+  });
 });
 
 app.get("/nieuws-toevoegen", async function (request, response) {
