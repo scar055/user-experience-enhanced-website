@@ -1,9 +1,18 @@
 {% render 'partials/head.liquid', title: 'nieuws', path: path %}
 
+<section>
+  <h1>nieuws</h1>
+</section>
+
 {% for nieuws in news %}
-  <p>{{ nieuws.title }}</p>
-  <p>{{ nieuws.description }}</p>
-  <p>{{ nieuws.date }}</p>
+  <article>
+    <section>
+      <img>
+      <p>{{ nieuws.date }}</p>
+    </section>
+    <h2>{{ nieuws.title }}</h2>
+    <p>{{ nieuws.description }}</p>
+  </article>
 {% endfor %}
 
 {% render 'partials/footer.liquid' %}
