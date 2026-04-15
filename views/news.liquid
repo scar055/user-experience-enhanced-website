@@ -1,3 +1,9 @@
-{% render 'partials/head.liquid', title: 'Ad award', path: path %}
+{% render 'partials/head.liquid', title: 'nieuws', path: path %}
+
+{% for nieuws in news %}
+  <p>{{ nieuws.title }}</p>
+  <p>{{ nieuws.description }}</p>
+  <p>{{ nieuws.date }}</p>
+{% endfor %}
 
 {% render 'partials/footer.liquid' %}
