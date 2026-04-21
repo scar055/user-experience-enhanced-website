@@ -63,7 +63,11 @@ app.post("/nieuws-toevoegen", async function (request, response) {
       "Content-Type": "application/json;charset=UTF-8",
     },
   });
-  response.redirect(303, "/nieuws-toevoegen");
+  response.redirect(303, "/nieuws-toevoegen-succes");
+});
+
+app.get("/nieuws-toevoegen-succes", async function (request, response) {
+  response.render("succes-add-news.liquid", {path: request.path});
 });
 
 app.get("/lado", async function (request, response) {
