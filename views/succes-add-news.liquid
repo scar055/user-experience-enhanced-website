@@ -1,38 +1,40 @@
 {% render 'partials/head.liquid', title: 'Ad award', path: path %}
 
 <main class="secondary-background">
-  <section>success</section>
+  <section>
+    <p>Je nieuws artikel is gepubliceerd. klik hier: <a href="/nieuws"></a></p>
+  </section>
   <section>
     <h1>voeg nieuws toe</h1>
     <form method="POST" action="/nieuws-toevoegen">
-      <label>
+      <label class="title">
         Title
         <input name="title" id="title" type="text">
       </label>
-      <label>
+      <label class="description">
         Beschrijving
         <textarea id="description" name="description"></textarea>
       </label>
-      <label>
+      <label class="author">
         Auteur
         <input id="author" name="author" type="text">
       </label>
-      <label>
+      <label class="date">
         Datum
         <input id="date" name="date" type="date" required>
       </label>
-      <label>
+      <label class="status">
         Publicatie
         <select id="status" name="status">
           <option value="published">gepubliceerd</option>
           <option value="draft">voorlopig versie</option>
         </select>
       </label>
-      <label>
+      <label class="article">
         Artikel
         <textarea id="body" name="body"></textarea>
       </label>
-      <button>verzenden</button>
+      <button class="send">verzenden</button>
     </form>
   </section>
 </main>

@@ -81,10 +81,31 @@ main {
                 "article article"
                 ". button"
             ;
+
+            .title {
+                grid-area: title;
+            }
+
+            .description {
+                grid-area: description;
+            }
+
+            .date {
+                grid-area: date;
+            }
+
+            .article {
+                grid-area: article;
+            }
+
+            .send {
+                grid-area: button;
+            }
         }
 
         label {
-            display: grid;
+            display: flex;
+            flex-direction: column;
 
             input[type="text"],
             input[type="date"],
