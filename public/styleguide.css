@@ -20,15 +20,14 @@
 }
 
 html {
-    --primary-color: #000c1a;
-    --secondary-color: #cd3618;
+    --primary-color: #51AEAE;
+    --secondary-color: #AD6351;
     --background-color: white;
-    --secondary-background-color: #c2ddff;
+    --secondary-background-color: #2E6161;
     --triary-background-color: #fafafa;
-    --background-color-dark: #002a5c;
     --text-color: black;
-    --secondary-text-color: #001f44;
-    --button-background: #00408d;
+    --secondary-text-color: #fff;
+    --button-background: #51AEAE;
 
     h1 {
         font-family: archivo;
@@ -71,7 +70,7 @@ html {
 
 .link-button {
     background-color: var(--button-background);
-    color: var(--background-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 15px;
     padding: 1.1rem 1.8rem;
