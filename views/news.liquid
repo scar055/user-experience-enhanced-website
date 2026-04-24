@@ -3,16 +3,17 @@
 <section>
   <h1>nieuws</h1>
 </section>
-
-{% for nieuws in news %}
-  <article>
-    <section>
-      <img>
-      <p>{{ nieuws.date }}</p>
-    </section>
-    <h2>{{ nieuws.title }}</h2>
-    <p>{{ nieuws.description }}</p>
-  </article>
-{% endfor %}
+<section>
+  {% for nieuws in news %}
+    <article>
+      <section>
+        <img>
+        <p>{{ nieuws.date }}</p>
+      </section>
+      <h2>{{ nieuws.title }}</h2>
+      <p>{{ nieuws.description }}</p>
+    </article>
+  {% endfor %}
+</section>
 
 {% render 'partials/footer.liquid' %}
