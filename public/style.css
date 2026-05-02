@@ -50,6 +50,10 @@ main {
         padding-inline: 1em;
         gap: .75em;
 
+        .secondary-header {
+            color: var(--secondary-text-color);
+        }
+
         &:nth-of-type(even) {
             background-color: var(--secondary-background-color);
         }
