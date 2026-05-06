@@ -6,36 +6,7 @@
   </section>
   <section>
     <h1 class="secondary-header">voeg nieuws toe</h1>
-    <form method="POST" action="/nieuws-toevoegen">
-      <label class="title">
-        Title
-        <input name="title" id="title" type="text">
-      </label>
-      <label class="description">
-        Beschrijving
-        <textarea id="description" name="description"></textarea>
-      </label>
-      <label class="author">
-        Auteur
-        <input id="author" name="author" type="text">
-      </label>
-      <label class="date">
-        Datum
-        <input id="date" name="date" type="date" required>
-      </label>
-      <label class="status">
-        Publicatie
-        <select id="status" name="status">
-          <option value="published">gepubliceerd</option>
-          <option value="draft">voorlopig versie</option>
-        </select>
-      </label>
-      <label class="article">
-        Artikel
-        <textarea id="body" name="body"></textarea>
-      </label>
-      <button class="send">verzenden</button>
-    </form>
+    {% render 'partials/add-news-form.liquid' %}
   </section>
 </main>
 
