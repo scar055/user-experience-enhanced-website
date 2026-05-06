@@ -22,14 +22,14 @@
     formButton.textContent = 'loading...';
 
     //formdata voorbereiden:
-    let formData = new FormData(scoreForm);
+    let formData = new FormData(newsForm);
 
     // Data fetchen:
     // Doe een fetch naar de server, net als hoe de browser dit normaal zou doen
     // Gebruik daarvoor het action en method attribuut van het formulier
     // Stuur de formulierelementen mee
-    const response = await fetch(scoreForm.action, {
-      method: scoreForm.method, //POST dus
+    const response = await fetch(newsForm.action, {
+      method: newsForm.method, //POST dus
       body: new URLSearchParams(formData), // <<< Dit moet omdat server.js anders niet met de formulier data kan werken
     });
 
@@ -47,6 +47,14 @@
     // Nu kan je waarschijnlijk de Loading state vervangen door een Success state
     formButton.classList.remove('loading');
     formButton.textContent = 'Save score';
+
+    if (response.ok) {
+      // Gebruik de URL van de redirect (of een hardcoded URL) om de browser te verplaatsen
+      window.location.href = '/nieuws-toevoegen-succes';
+    } else {
+      // Error handling
+      formButton.textContent = 'Fout bij opslaan';
+    }
   });
 </script>
 {% render 'partials/footer.liquid' %}
