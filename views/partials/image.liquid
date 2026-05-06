@@ -2,7 +2,7 @@
   eerste if kijkt naar de map van eigen images
 {% endcomment %}
 
-{% if imagesrc contains '/assets/images' %}
+{% if imagesrc contains 'assets/images' %}
   <picture>
     <source
       srcset="{{ imagesrc }}.avif?width={{ width }}&height={{ height }}&quality=70"
