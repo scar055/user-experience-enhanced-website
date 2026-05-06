@@ -12,11 +12,11 @@
     loading: 'lazy'
   %}
 </section>
-<section>
+<section class="news-section">
   {% for nieuws in news %}
     <article>
       <section>
-        <img>
+        <img src="assets/images/calendar.svg" alt="calendar icon" loading="lazy" fetchpriority="auto">
         <p>{{ nieuws.date }}</p>
       </section>
       <h2>{{ nieuws.title }}</h2>

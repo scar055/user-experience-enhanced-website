@@ -143,3 +143,25 @@ main {
         }
     }
 }
+
+.news-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    margin-inline: 5em;
+
+    article {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 1em;
+        border-radius: 1em;
+        padding: 2em;
+        border: 1px solid black;
+
+        section {
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+        }
+    }
+}
