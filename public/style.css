@@ -41,6 +41,12 @@ header {
 
 /* main */
 
+.secondary-background {
+    p {
+        color: var(--secondary-text-color);
+    }
+}
+
 main {
     section {
         display: flex;
