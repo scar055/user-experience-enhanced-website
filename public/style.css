@@ -18,6 +18,12 @@
             justify-content: center;
             padding: 3rem;
 
+            li {
+                &:nth-of-type(1) {
+                    justify-content: flex-end;
+                }
+            }
+
             @supports selector(popover) {
                 height: 100dvh;
             }
@@ -27,10 +33,10 @@
             width: 50dvw;
         }
 
+    }
 
-        @media (width >=1200px) {
-            display: none;
-        }
+    @media (width >=1200px) {
+        display: none;
     }
 
     ::backdrop {

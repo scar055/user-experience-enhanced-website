@@ -72,6 +72,7 @@ html {
     background-color: var(--button-background);
     color: var(--text-color);
     text-decoration: none;
+    border: none;
     border-radius: 15px;
     padding: 1.1rem 1.8rem;
 }
