@@ -3,9 +3,38 @@
 .mobile-header {
     display: flex;
     background-color: var(--triary-background-color);
+    justify-content: space-between;
+    padding: 1.5rem 5%;
 
-    @media (width >=1200px) {
-        display: none;
+    nav {
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 100dvw;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+
+            @supports selector(popover) {
+                height: 100dvh;
+            }
+        }
+
+        @media (width >=525px) {
+            width: 50dvw;
+        }
+
+
+        @media (width >=1200px) {
+            display: none;
+        }
+    }
+
+    ::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
