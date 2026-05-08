@@ -20,6 +20,8 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/enhance
 <!-- Voeg een link toe naar je live site 🌐-->
 Dit project was een werkende formulier voor ad connect zodat ze nieuwe nieuws artikelen kunnen maken.
 
+https://user-experience-enhanced-website-eher.onrender.com/nieuws
+
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
