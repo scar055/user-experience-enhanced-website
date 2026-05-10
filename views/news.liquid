@@ -17,7 +17,7 @@
     <article>
       <section>
         <img src="assets/images/calendar.svg" alt="calendar icon" loading="lazy" fetchpriority="auto">
-        <p>{{ nieuws.date }}</p>
+        <p>{{ nieuws.date | date: '%Y-%m-%d' }}</p>
       </section>
       <h2>{{ nieuws.title }}</h2>
       <p>{{ nieuws.description }}</p>
