@@ -21,7 +21,7 @@ app.get("/", async function (request, response) {
 
 app.get("/nieuws", async function (request, response) {
   const params = {
-    "groupBy[]": "title,description,date",
+    fields: "title,description,date",
   };
   const newsResponse = await fetch(
     "https://fdnd-agency.directus.app/items/adconnect_news/?" +
