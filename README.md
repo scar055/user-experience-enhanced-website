@@ -27,11 +27,20 @@ https://user-experience-enhanced-website-eher.onrender.com/nieuws
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+bij de website kan je naar het nieuws toevoegen formulier gaan om een nieuwe nieuws artikel toe te voegen
+<img width="2906" height="1702" alt="image" src="https://github.com/user-attachments/assets/0b5c2eba-11f6-4c2a-9e4e-2538807f60c4" />
 
+en dan kan je naar de nieuws pagina om ze te zien
+<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/5620cd4b-4eea-4775-a18e-1085185ba2cb" />
 
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+
+liquid
+client side script
+popover
+
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
@@ -42,6 +51,7 @@ dan installeer je de node package met het command `npm install` of `npm i`
 en om de website te starten run je `npm start` en ga je naar localhost:8000
 
 ## Bronnen
+https://developer.chrome.com/blog/introducing-popover-api
 
 
 ## Licentie
